@@ -16,6 +16,7 @@ export default function ProdutosPage() {
         <div style={{ padding: 20 }}>
             <h1>Lista de Produtos</h1>
 
+            <button onClick={() => navigate("/produtos/novo")}>Cadastrar novo Produto</button>
             <button onClick={() => navigate("/")}>Voltar para Categorias</button>
 
             <ul style={{ marginTop: 20 }}>
