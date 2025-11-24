@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function CategoriasPage() {
     const [categorias, setCategorias] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         async function carregarCategorias() {
@@ -32,6 +34,8 @@ export default function CategoriasPage() {
     return (
         <div style={{ padding: "20px" }}>
             <h1>Lista de Categorias</h1>
+
+            <button onClick={() => navigate("/produtos")}>Ir para a lista de Produtos</button>
 
             <div style={{
                 display: "grid",
